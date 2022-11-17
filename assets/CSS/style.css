@@ -1,0 +1,440 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1f 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-areas: "nav        nav"
+                         "header     header"
+                         "main       main"
+                         "footer     footer";
+}
+
+nav{
+    background-color: #D67504;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 2; 
+    height: 90px;
+    grid-area: nav;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+   
+}
+
+nav .logo{
+    padding: 5px 20px;
+}
+
+nav li a:hover{
+    font-weight: bold;
+}
+
+header{
+    background-image: url(../img/header_prim.jpg);
+    background-size: cover;
+    width: 100%;
+    height:520px;
+    display: flex;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
+    top: 80px;
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+/*Inicio*/
+.nosotros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nos{
+    display: flex;
+    width: 700px;
+    height: 300px;
+    padding: 20px;
+    margin: 20px;    
+    gap: 5px;
+    justify-content: center;
+    background-color: #C2C0A6;
+    
+}
+
+.nos__img{
+    width: 50%;
+}
+
+.nos__titulo{
+    display: flex;
+    text-decoration: underline;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 40px;
+}
+
+.nos__texto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Productos*/
+.tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.prod{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 430px;
+    border: 5px double;
+    margin: 10px;
+    padding: 5px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;    
+}
+
+.prod__img{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+
+.prod__titulo{
+    text-align: center;
+    font-size: 18px;
+    
+}
+
+.prod__precio{
+    font-size: 18px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+.btn{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color:#D67504;
+    color:white;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: #D9AE5F;
+    color: black;
+}
+
+/*acerca del té*/
+.his{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.historia{
+    display: flex;
+    justify-content: center;
+    background-color: #FFB94D;
+    width: 1200px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px;    
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.historia__img{
+    width: 100%;
+}
+
+.historia__texto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.historia__titulo{
+    align-content: center;
+    text-decoration: underline;
+    padding: 10px;
+    margin: 10px;
+    font-size: 40px;
+}
+
+#tiposte{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.tipo{
+    height: 700px;
+    width: 90%;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1f 1f 1f 1f;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: "zt zt zt zt"
+                         "z1 z2 z3 z4";
+    background-color: #C2C0A6;    
+
+}
+
+.tipo__titulo{
+    grid-area: zt;
+    display: flex;
+    text-decoration: underline;
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+    gap: 10px;
+    font-size: 40px;
+}
+
+.tipo img:nth-child(2){
+    grid-area: z1;
+}
+
+.tipo img:nth-child(3){
+    grid-area: z2;
+}
+
+.tipo img:nth-child(4){
+    grid-area: z3;
+}
+
+.tipo img:nth-child(5){
+    grid-area: z4;
+}
+
+.tipo__img{
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+    padding: 10px;
+    margin: 10px;    
+    border-radius: 25px;
+    gap: 5px;
+
+}
+
+/*Contacto*/
+#formulario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form{
+    width: 900px;
+    background-color: #C2C0A6;
+    margin: 20px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1f 1f 1f 1f;
+    grid-template-areas: "z1 z2"
+                         "z3 z3"
+                         "z4 z5"
+                         "z6 z6";
+}
+
+.form label{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.form__box, .form__msj{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #D67504;
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 5px;
+    width: 95%;
+    justify-self: center;
+    align-self: center;
+
+}
+
+.form__name{
+    grid-area: z1;
+    font-size: 25px;
+}
+
+.form__email{
+    grid-area: z2;
+    font-size: 25px;
+}
+
+form legend{
+    grid-area: z3;
+    margin: 10px;
+    font-size: 25px;
+
+}
+
+.form__select{
+    grid-area: z4;
+    padding: 5px;
+    width: 95%;
+    margin-left: 10px;
+    font-size: 15px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #D67504;
+}
+
+.form__msj{
+    grid-area: z5;
+    font-size: 15px;
+    width: 90%;
+}
+
+form button:nth-child(6){
+    grid-area: z6;
+    justify-self: center;
+    width: 30%;
+    margin-top: 20px;
+}
+
+.contacto{
+    font-size: 20px;
+    margin: 15px;
+    font-style: italic;
+}
+
+/*Paquete de regalo*/
+.paqueteregalo{
+    display: flex;
+    width: 90%;
+    background-color: #786E61;
+    height: 370px;
+    border: 5px double;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.pregalo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pregalo__img{
+    width: 100%;
+    height: 300px;
+    margin: 10px;
+    justify-items: center;
+}
+
+.pregalo__des{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: end;
+}
+
+.pregalo__titulo{
+    font-size: 35px;
+    color: #D9AE5F;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*Footer*/
+footer{
+    background-color: black;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    grid-template-areas:"a1 a2"
+                        "a1 a2";
+    grid-area: footer;
+}
+
+.suscripcion{
+    justify-self: center;
+    grid-area: a1;
+    width: 400px;
+    border: 5px solid #D67504;
+}
+
+footer h3{
+    color: white;
+    padding: 15px;
+    margin: 5px 25px;
+    justify-self: center;
+    align-self: center;
+    
+}
+.box{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px #D67504;
+    color: white;
+    width: 80%;
+    margin: 10px;
+}
+
+.redes{
+    display: flex;
+    flex-wrap: wrap;
+    width: 270px;
+    justify-self: center;
+    align-items: center;
+    grid-area: a2;
+}
+
+.redes__img{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
