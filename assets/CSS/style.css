@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-
+/*
 body{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -13,7 +13,7 @@ body{
                          "main       main"
                          "footer     footer";
 }
-
+*/
 nav{
     background-color: #D67504;
     display: flex;
@@ -30,6 +30,7 @@ nav{
 nav ul{
     list-style-type: none;
     display: flex;
+    order: 3;
 }
 
 nav li a {
@@ -41,6 +42,7 @@ nav li a {
 
 nav .logo{
     padding: 5px 20px;
+    order: 1;
 }
 
 nav li a:hover{
@@ -49,13 +51,11 @@ nav li a:hover{
 
 .fa-bars{
     visibility:hidden;
+    order: 2;
 }
-/*
+
 @media (max-width: 690px){
-    nav {
-        justify-content: center;
-       
-    }
+  
     nav ul{
         flex-direction:column;
         position: fixed;
@@ -63,18 +63,40 @@ nav li a:hover{
         left: -350px;
         background-color: #D67504;
         width: 50vw;
-        height: 100vh;
+        height: 80vh;
         font-size: 30px;
+        gap: 20px;
+        
+    }
+    nav li a {
+        margin: 20px;
     }
     .fa-bars{
         font-size: 24px;
         visibility:visible ;
+        order: 1;
+        display: flex;
+        justify-content: start;
     }
-    .fa-bars:hover + ul {
+    .fa-bars:hover + nav ul {
         left: 0;
     }
+    nav ul :hover{
+        left: 0;
+    }
+    nav .logo{
+        padding: 5px 20px;
+        order: 2;
+        display: flex;
+        justify-content: center;
+    }
+    header{
+        background-size: cover;
+        width: 640px;
+        height: 500px;
+    }
 }
-*/
+
 
 header{
     background-image: url(../img/header_prim.jpg);
@@ -82,10 +104,10 @@ header{
     width: 100%;
     height:520px;
     display: flex;
-    margin-bottom: 80px;
+    margin-bottom: 110px;
     position: relative;
     z-index: 1;
-    top: 80px;
+    top: 110px;
     grid-area: header;
 }
 
@@ -106,7 +128,6 @@ main{
     height: 370px;
     padding: 20px;
     margin: 10px;    
-    gap: 5px;
     justify-content: center;
     background-color: #C2C0A6;
     border-radius: 5px;
@@ -131,6 +152,19 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+@media (max-width: 690px){
+    .nos{
+        width: 350px;
+        height: 670px;
+        flex-direction: column;
+        
+    }
+    .nos__img{
+        width: 70%;
+        height: 480px;
+    }
 }
 
 /*Productos*/
@@ -380,6 +414,19 @@ form button:nth-child(6){
     font-size: 20px;
     margin: 15px;
     font-style: italic;
+}
+
+@media (max-width: 690px){
+    .form{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1f 1f 1f 1f 1f 1f;
+        grid-template-areas: "z1 z1"
+                             "z2 z2"
+                             "z3 z3"
+                             "z4 z4"
+                             "z5 z5"
+                             "z6 z6";
+    }
 }
 
 /*Paquete de regalo*/
