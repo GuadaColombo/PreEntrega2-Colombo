@@ -91,12 +91,12 @@ nav li a:hover{
         justify-content: center;
     }
     header{
+        display: flex;
         background-size: cover;
         width: 640px;
         height: 500px;
     }
 }
-
 
 header{
     background-image: url(../img/header_prim.jpg);
@@ -134,7 +134,7 @@ main{
 }
 
 .nos__img{
-    width: 50%;
+    width: 100%;
 }
 
 .nos__titulo{
@@ -152,18 +152,60 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0px 15px;
 }
 
-@media (max-width: 690px){
+@media (max-width: 745px){
     .nos{
         width: 350px;
-        height: 670px;
+        height: 780px;
         flex-direction: column;
         
     }
     .nos__img{
-        width: 70%;
+        width: 100%;
         height: 480px;
+        align-content: center;
+    }
+}
+
+@media (max-width: 440px){
+    .nos{
+        width: 270px;
+        height: 880px;
+    }
+    .nos__texto p{
+        gap: 10px;
+    }
+}
+
+.titulos2{
+    display: flex;
+    flex-wrap: wrap;
+    height: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-size: 20px;
+}
+
+#indextarj{
+    background-color: #C2C0A6;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#tarj{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 810px){
+    #tarj{
+        flex-direction: column;
     }
 }
 
@@ -171,7 +213,7 @@ main{
 .tarjetas{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .titulos{
@@ -182,6 +224,7 @@ main{
     justify-content: center;
     align-items: center;
     padding: 5px;
+    margin: 10px;
     font-size: 20px;
 }
 
@@ -191,11 +234,12 @@ main{
     width: 200px;
     height: auto;
     border: 5px double;
-    margin: 10px;
+    margin: 10px 20px;
     padding: 5px 20px;
     justify-content: center;
     align-items: center;
-    gap: 10px;    
+    gap: 10px;
+    background-color: white;
 }
 
 .prod__img{
@@ -245,7 +289,7 @@ main{
     justify-content: center;
     background-color: #FFB94D;
     width: 1200px;
-    height: 400px;
+    height: 520px;
     padding: 20px;
     margin: 20px;    
     gap: 10px;
@@ -268,6 +312,45 @@ main{
     padding: 10px;
     margin: 10px;
     font-size: 40px;
+}
+
+@media (max-width:1032px){
+    .historia{
+        flex-direction: column;
+        height: 1280px;
+    }
+}
+
+@media (max-width:920px){
+    .historia{
+        height: 1160px;
+    }
+}
+
+@media (max-width:856px){
+    .historia{
+        height: 1110px;
+    }
+}
+@media (max-width:778px){
+    .historia{
+        height: 1050px;
+    }
+}
+@media (max-width:672px){
+    .historia{
+        height: 980px;
+    }
+}
+@media (max-width:406px){
+    .historia{
+        height: 1100px;
+    }
+}
+@media (max-width:342px){
+    .historia{
+        height: 1150px;
+    }
 }
 
 #tiposte{
