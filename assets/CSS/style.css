@@ -191,7 +191,7 @@ main{
 }
 
 #indextarj{
-    background-color: #C2C0A6;
+    font-weight: bold;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -287,7 +287,7 @@ main{
 .historia{
     display: flex;
     justify-content: center;
-    background-color: #FFB94D;
+    background-color: #C2C0A6;
     width: 1200px;
     height: 520px;
     padding: 20px;
@@ -352,27 +352,27 @@ main{
         height: 1150px;
     }
 }
+ 
 
-#tiposte{
+.tiposte{
     display: flex;
-    align-content: center;
     justify-content: center;
+    align-items: center;
+    
 }
-
 .tipo{
-    height: 700px;
-    width: 90%;
+    height: 650px;
+    width: 93%;
     border-radius: 5px;
+    margin: 5px;
+    background:#C2C0A6;
     display: grid;
     grid-template-columns: 1f 1f 1f 1f;
     grid-template-rows: 80px 1fr;
     grid-template-areas: "zt zt zt zt"
                          "z1 z2 z3 z4";
-    background-color: #C2C0A6;    
-
 }
-
-.tipo__titulo{
+.tipostitulo{
     grid-area: zt;
     display: flex;
     text-decoration: underline;
@@ -382,33 +382,72 @@ main{
     gap: 10px;
     font-size: 40px;
 }
-
-.tipo img:nth-child(2){
+.card{
+    display: flex;
+    margin: 15px 0px 0px 15px;
+}
+.contenedor{
+    height: 500px;
+    margin: 10px;
+    overflow: hidden;
+}
+.imgtes{
+    height: 500px;
+    width: 230px;
+    border-radius: 5px;
+}
+.contenido{
+    height: 70px;
+    width: 230px;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 65px;
+    background: rgb(27, 27, 27, .5);
+    color: black;
+    transition: .9s;
+}
+.contenido h2{
+    margin: 10px;
+    font-size: 40px;
+}
+.contenido p{
+    font-size: 20px;
+    margin: 20px;
+    visibility: hidden;
+    opacity: 0;
+}
+.contenedor:hover{
+    cursor: pointer;
+}
+.contenedor:hover  .contenido{
+    height: 240px;
+    bottom: 240px;
+    background: rgb(27, 27, 27, .5);
+}
+.contenedor:hover p{
+    opacity: 1;
+    visibility: visible;
+}
+.tipo:nth-child(2){
     grid-area: z1;
+    
 }
 
-.tipo img:nth-child(3){
+.tipo:nth-child(3){
     grid-area: z2;
 }
 
-.tipo img:nth-child(4){
+.tipo:nth-child(4){
     grid-area: z3;
 }
 
-.tipo img:nth-child(5){
+.tipo:nth-child(5){
     grid-area: z4;
 }
 
-.tipo__img{
-    width: 80%;
-    justify-self: center;
-    align-self: center;
-    padding: 10px;
-    margin: 10px;    
-    border-radius: 25px;
-    gap: 5px;
 
-}
+
 
 /*Contacto*/
 #formulario{
