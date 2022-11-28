@@ -25,6 +25,7 @@ nav{
     z-index: 2; 
     grid-area: nav;
     padding: 10px;
+    font-size: 20px;
 }
 
 nav ul{
@@ -51,19 +52,25 @@ nav li a:hover{
 
 .fa-bars{
     visibility:hidden;
+    font-size: 24px;
+    padding: 15px;
     order: 2;
+    
 }
 
-@media (max-width: 690px){
+@media (max-width: 848px){
   
     nav ul{
         flex-direction:column;
         position: fixed;
         top: 0;
-        left: -350px;
+        left: -250px;
         background-color: #D67504;
-        width: 50vw;
-        height: 80vh;
+        width: 250px;
+        height: 100vh;
+        transition: .2s;
+        z-index: 100;
+        justify-content: center;
         font-size: 30px;
         gap: 20px;
         
@@ -72,16 +79,13 @@ nav li a:hover{
         margin: 20px;
     }
     .fa-bars{
-        font-size: 24px;
-        visibility:visible ;
+        visibility:visible;
         order: 1;
-        display: flex;
-        justify-content: start;
     }
     .fa-bars:hover + nav ul {
         left: 0;
     }
-    nav ul :hover{
+    nav ul:hover{
         left: 0;
     }
     nav .logo{
@@ -90,12 +94,7 @@ nav li a:hover{
         display: flex;
         justify-content: center;
     }
-    header{
-        display: flex;
-        background-size: cover;
-        width: 640px;
-        height: 500px;
-    }
+    
 }
 
 header{
@@ -313,43 +312,61 @@ main{
     margin: 10px;
     font-size: 40px;
 }
+.historia__texto{
+    font-size: 18px;
+}
 
-@media (max-width:1032px){
+@media (max-width:1154px){
     .historia{
         flex-direction: column;
-        height: 1280px;
+        height: 1460px;
     }
 }
 
-@media (max-width:920px){
+@media (max-width:1102px){
     .historia{
-        height: 1160px;
+        height: 1360px;
     }
 }
 
-@media (max-width:856px){
+@media (max-width:962px){
     .historia{
-        height: 1110px;
+        height: 1260px;
+    }
+}
+@media (max-width:872px){
+    .historia{
+        height: 1190px;
     }
 }
 @media (max-width:778px){
     .historia{
-        height: 1050px;
+        height: 1130px;
     }
 }
 @media (max-width:672px){
     .historia{
-        height: 980px;
+        height: 1090px;
     }
 }
-@media (max-width:406px){
-    .historia{
-        height: 1100px;
-    }
-}
-@media (max-width:342px){
+@media (max-width:466px){
     .historia{
         height: 1150px;
+    }
+}
+@media (max-width:416px){
+    .historia{
+        height: 1190px;
+    }
+}
+@media (max-width:368px){
+    .historia{
+        height: 1280px;
+    }
+}
+@media (max-width:354px){
+    .historia{
+        height: 1380px;
     }
 }
  
@@ -362,15 +379,54 @@ main{
 }
 .tipo{
     height: 650px;
-    width: 93%;
+    width: 91%;
     border-radius: 5px;
     margin: 5px;
+    justify-content: center;
+    align-items: center;
     background:#C2C0A6;
     display: grid;
-    grid-template-columns: 1f 1f 1f 1f;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 80px 1fr;
     grid-template-areas: "zt zt zt zt"
                          "z1 z2 z3 z4";
+}
+@media (max-width:1146px){
+    .tipo{
+        width: 650px;
+        height: 1160px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 1fr 1fr 1fr 1fr;
+        grid-template-areas: "zt zt"
+                            "z1 z2"
+                            "z1 z2"
+                            "z3 z4"
+                            "z3 z4";
+        }
+}
+@media (max-width:694px){
+    .tipo{
+        width: 380px;
+        height: 2300px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+        grid-template-areas: "zt"
+                            "z1"
+                            "z1"
+                            "z2"
+                            "z2"
+                            "z3"
+                            "z3"
+                            "z4"
+                            "z4";
+    }
+}
+@media (max-width:438px){
+    .tipo{
+        width: 320px;
+        height: 2500px;
+        grid-template-rows: 160px 1fr 1fr 1fr 1fr;
+    }
 }
 .tipostitulo{
     grid-area: zt;
@@ -378,13 +434,16 @@ main{
     text-decoration: underline;
     padding: 10px;
     margin: 10px;
-    justify-content: center;
+    justify-self: center;
+    align-self: center;
     gap: 10px;
     font-size: 40px;
 }
 .card{
     display: flex;
-    margin: 15px 0px 0px 15px;
+    margin: 5px;
+    justify-self: center;
+    align-self: center;
 }
 .contenedor{
     height: 500px;
@@ -431,7 +490,6 @@ main{
 }
 .tipo:nth-child(2){
     grid-area: z1;
-    
 }
 
 .tipo:nth-child(3){
